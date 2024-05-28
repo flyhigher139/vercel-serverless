@@ -1,0 +1,20 @@
+{
+  "github": {
+    "silent": true
+  },
+  "build": {
+    "env": {
+      "GO_BUILD_FLAGS": "-ldflags '-s -w'"
+    }
+  },
+  "routes": [
+    {
+      "src": "/hello",
+      "dest": "/api/hello"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/handler"
+    }
+  ]
+}
