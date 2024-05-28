@@ -20,7 +20,7 @@ import (
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
-	if strings.HasPrefix("/hello", r.URL.Path) {
+	if strings.HasPrefix(r.URL.Path, "/hello") {
 		w.Write([]byte("Hello World"))
 		return
 	}

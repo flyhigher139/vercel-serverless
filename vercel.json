@@ -9,6 +9,10 @@
   },
   "routes": [
     {
+      "src": "/hi",
+      "dest": "/api/hello"
+    },
+    {
       "src": "/(.*)",
       "dest": "/api/handler"
     }
